@@ -23,7 +23,7 @@ export default function App() {
     var userInput = event.target.value;
     var meaning = emojiDictionary[userInput];
 
-    if (userInput === undefined) {
+    if (meaning === undefined) {
       meaning = "sorry we don't have this is our Database!";
     }
 
@@ -42,9 +42,9 @@ export default function App() {
         onChange={emojiInputHandler}
         placeholder={"Search your emoji....."}
       />
-      <h2> {meaning} </h2>
+      <h2 style={{ color: "red" }}> {meaning} </h2>
 
-      <h3> emojis we know</h3>
+      <h3 style={{ color: "blue" }}> emojis we know</h3>
       {emojiWeKnow.map((emoji) => {
         return (
           <span
